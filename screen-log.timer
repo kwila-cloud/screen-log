@@ -1,0 +1,16 @@
+[Unit]
+Description=Take a screenshot every minute or two
+
+[Timer]
+# Run 1 minute after boot
+OnBootSec=1min
+# Run every minute
+OnUnitActiveSec=1min
+# Apply up to 1 minute of delay
+RandomizedDelaySec=1min
+AccuracySec=1s
+Persistent=false
+
+[Install]
+WantedBy=timers.target
+

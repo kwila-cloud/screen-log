@@ -7,7 +7,7 @@ FORMAT="png"
 FILENAME="$DIR/$PREFIX-$DATE.$FORMAT"
 
 # for X11
-import -window root $FILENAME
+DISPLAY=:2 import -window root $FILENAME
 
 # for Wayland
 # grim
