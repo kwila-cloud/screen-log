@@ -13,3 +13,6 @@ DISPLAY=:2 import -window root $FILENAME
 # grim
 
 echo "Saved screenshot to $FILENAME"
+
+# Clean old screenshots after 7 days
+find "$DIR" -type f -mtime +7 -delete
