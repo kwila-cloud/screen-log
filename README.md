@@ -11,14 +11,19 @@ Keep a log of screenshots.
 1. Update `screen-log.service`
    1. Update `User` to an admin user
    2. Update `ExecStart` path
-2. Update `screenshot.sh`
+2. Create `/srv/screen-log` directory, owned by an admin user
+   1. `sudo mkdir /srv/screen-log`
+   2. `sudo chown <user> /srv/screen-log`
+3. Update `screenshot.sh`
    1. Update `DISPLAY` value
-3. Create `/srv/screen-log` directory, owned by an admin user
-4. `sudo cp screen-log.service /etc/systemd/system/screen-log.service`
-5. `sudo cp screen-log.timer /etc/systemd/system/screen-log.timer`
-6. `sudo systemctl daemon-reload`
-7. `sudo systemctl enable screen-log.timer`
-8. `sudo systemctl enable screen-log.service`
+4. Run `./screenshot.sh`
+5. Verify a new screenshot is added to `/srv/screen-log`
+   1. If not, fiddle with configuration of `screenshot.sh` (often the `DISPLAY` value is wrong)
+6. `sudo cp screen-log.service /etc/systemd/system/screen-log.service`
+7. `sudo cp screen-log.timer /etc/systemd/system/screen-log.timer`
+8. `sudo systemctl daemon-reload`
+9. `sudo systemctl enable screen-log.timer`
+10. `sudo systemctl enable screen-log.service`
 
 ## Set Up Samba Share
 
