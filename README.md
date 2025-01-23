@@ -24,6 +24,16 @@ Keep a log of screenshots.
 8. `sudo systemctl daemon-reload`
 9. `sudo systemctl enable screen-log.timer`
 10. `sudo systemctl enable screen-log.service`
+11. `sudo systemctl start screen-log.timer`
+12. Check that the trigger value is shown in `systemctl status screen-log.timer`
+    ```
+    ● screen-log.timer - Take a screenshot every minute or two
+         Loaded: loaded (/etc/systemd/system/screen-log.timer; enabled; vendor preset: enabled)
+         Active: active (waiting) since Thu 2025-01-23 03:09:43 EST; 30min ago
+        Trigger: Thu 2025-01-23 03:41:42 EST; 1min 44s left
+       Triggers: ● screen-log.service
+    ```
+   `
 
 ## Set Up Samba Share
 
