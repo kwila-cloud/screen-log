@@ -25,3 +25,12 @@ Keep a log of screenshots.
 [Instructions for Ubuntu](https://ubuntu.com/tutorials/install-and-configure-samba#1-overview)
 
 [Instructions for Fedora SilverBlue](https://discussion.fedoraproject.org/t/how-to-use-samba-in-silverblue/1570/8)
+
+Add the following to the bottom of `/etc/samba/samba.conf`
+```
+[sambashare]
+   comment = Screen Log
+   path = /srv/screen-log
+   read only = yes
+   browsable = yes
+```
