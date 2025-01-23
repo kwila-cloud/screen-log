@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-DIR="/srv/screenshot-log"
+DIR="/srv/screen-log"
 PREFIX="screenshot"
 DATE=`date +%Y-%m-%d__%H_%M_%S`
 FORMAT="png"

@@ -13,7 +13,7 @@ Keep a log of screenshots.
    2. Update `ExecStart` path
 2. Update `screenshot.sh`
    1. Update `DISPLAY` value
-3. Create `/srv/screenshot-log` directory, owned by an admin user
+3. Create `/srv/screen-log` directory, owned by an admin user
 4. `sudo cp screen-log.service /etc/systemd/system/screen-log.service`
 5. `sudo cp screen-log.timer /etc/systemd/system/screen-log.timer`
 6. `sudo systemctl daemon-reload`
