@@ -9,16 +9,11 @@ Keep a log of screenshots.
 
 ## Install Service
 1. Update `screen-log.service`
-   1. Update `User` to an admin user
-   2. Update `ExecStart` path
-2. Create `/srv/screen-log` directory, owned by an admin user
+   1. Update `ExecStart` path
+2. Create `/srv/screen-log` directory
    1. `sudo mkdir /srv/screen-log`
-   2. `sudo chown <user> /srv/screen-log`
-3. Update `screenshot.sh`
-   1. Update `DISPLAY` value
-4. Run `./screenshot.sh`
+4. Run `sudo ./screenshot.sh`
 5. Verify a new screenshot is added to `/srv/screen-log`
-   1. If not, fiddle with configuration of `screenshot.sh` (often the `DISPLAY` value is wrong)
 6. `sudo cp screen-log.service /etc/systemd/system/screen-log.service`
 7. `sudo cp screen-log.timer /etc/systemd/system/screen-log.timer`
 8. `sudo systemctl daemon-reload`

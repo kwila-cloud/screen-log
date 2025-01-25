@@ -3,8 +3,9 @@ Description=Keep a log of screenshots
 
 [Service]
 Type=simple
-User=addison
-ExecStart=/home/addison/Documents/repos/kwila-cloud/screen-log/screenshot.sh
+User=root
+Group=root
+ExecStart=/home/addison/Documents/repos/screen-log/screenshot.sh
 
 [Install]
 WantedBy=multi-user.target
