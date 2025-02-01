@@ -8,6 +8,7 @@ Keep a log of screenshots.
 - https://www.perplexity.ai/search/systemd-script-that-runs-once-1HMPhyn9QoeqHJ6AfpfCRQ
 
 ## Install Service
+1. Install image magick
 1. Update `screen-log.service`
    1. Update `ExecStart` path
 2. Create `/srv/screen-log` directory
