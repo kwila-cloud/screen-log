@@ -5,7 +5,7 @@ Description=Keep a log of screenshots
 Type=simple
 User=root
 Group=root
-ExecStart=/home/addison/Documents/repos/screen-log/screenshot.sh
+ExecStart=/root/screen-log/screenshot.sh
 
 [Install]
 WantedBy=multi-user.target
