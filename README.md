@@ -1,4 +1,4 @@
-# 📜🖥️ screen-scribe
+# 🖥️📜 screen-scribe
 
 Keep a history of screenshots.
 
